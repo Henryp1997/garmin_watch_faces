@@ -24,34 +24,6 @@ class code_faceView extends WatchUi.WatchFace {
     // Load your resources here
     function onLayout(dc) {
         setLayout(Rez.Layouts.WatchFace(dc));
-        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
-        dc.fillRectangle(0, 0, dc.getWidth(), dc.getHeight());
-        dc.clear();
-
-        // write all orange static text
-        dc.setColor(Graphics.COLOR_ORANGE, Graphics.COLOR_BLACK);
-        dc.drawText(x_start_pos, y_start_pos, font_size, "Class WatchFace:", justify);
-        dc.drawText(x_start_pos + col_spacing, y_start_pos + row_spacing, font_size, "def", justify);
-        dc.drawText(x_start_pos + 2*col_spacing + 72, y_start_pos + 2*row_spacing, font_size, "=", justify);
-        dc.drawText(x_start_pos + 2*col_spacing + 72, y_start_pos + 3*row_spacing, font_size, "=", justify);
-        dc.drawText(x_start_pos + 2*col_spacing + 113, y_start_pos + 4*row_spacing, font_size, "=", justify);
-        dc.drawText(x_start_pos + 2*col_spacing + 77, y_start_pos + 5*row_spacing, font_size, "=", justify);
-        dc.drawText(x_start_pos + 2*col_spacing + 82, y_start_pos + 6*row_spacing, font_size, "=", justify);
-
-        // write all white static text
-        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
-        dc.drawText(x_start_pos + col_spacing + 90, y_start_pos + row_spacing, font_size, "self", justify);
-        dc.drawText(x_start_pos + 2*col_spacing, y_start_pos + 2*row_spacing, font_size, "self.time", justify);
-        dc.drawText(x_start_pos + 2*col_spacing, y_start_pos + 3*row_spacing, font_size, "self.date", justify);
-        dc.drawText(x_start_pos + 2*col_spacing, y_start_pos + 4*row_spacing, font_size, "self.heart_rate", justify);
-        dc.drawText(x_start_pos + 2*col_spacing, y_start_pos + 5*row_spacing, font_size, "self.steps", justify);
-        dc.drawText(x_start_pos + 2*col_spacing, y_start_pos + 6*row_spacing, font_size, "self.power", justify);
-
-        // write all blue static text
-        dc.setColor(Graphics.COLOR_BLUE, Graphics.COLOR_BLACK);
-        dc.drawText(x_start_pos + col_spacing + 30, y_start_pos + row_spacing, font_size, "__init__(", justify);
-        dc.drawText(x_start_pos + col_spacing + 120, y_start_pos + row_spacing, font_size, "):", justify);
-
     }
 
     // Called when this View is brought to the foreground. Restore
@@ -62,6 +34,11 @@ class code_faceView extends WatchUi.WatchFace {
 
     // Update the view
     function onUpdate(dc) {
+
+        // colour background in black
+        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
+        dc.fillRectangle(0, 0, dc.getWidth(), dc.getHeight());
+        dc.clear();
         
         // update time and date strings
         var today = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
@@ -121,14 +98,38 @@ class code_faceView extends WatchUi.WatchFace {
         var battery_string = Lang.format("'$1$%'", [battery.format("%2d")]);
 
         // check sleeping to change text colour before writing to screen
-        var text_col = Graphics.COLOR_BLUE;
-        if (sleeping) {
-            text_col = Graphics.COLOR_WHITE;
-        }
-        dc.setColor(text_col, Graphics.COLOR_BLACK);
+        // var text_col = Graphics.COLOR_BLUE;
+        // if (sleeping) {
+        //     text_col = Graphics.COLOR_WHITE;
+        // }
+        // dc.setColor(text_col, Graphics.COLOR_BLACK);
         
         dc.setColor(Graphics.COLOR_BLUE, Graphics.COLOR_BLACK);
         
+        // write all orange static text
+        dc.setColor(Graphics.COLOR_ORANGE, Graphics.COLOR_BLACK);
+        dc.drawText(x_start_pos, y_start_pos, font_size, "Class WatchFace:", justify);
+        dc.drawText(x_start_pos + col_spacing, y_start_pos + row_spacing, font_size, "def", justify);
+        dc.drawText(x_start_pos + 2*col_spacing + 72, y_start_pos + 2*row_spacing, font_size, "=", justify);
+        dc.drawText(x_start_pos + 2*col_spacing + 72, y_start_pos + 3*row_spacing, font_size, "=", justify);
+        dc.drawText(x_start_pos + 2*col_spacing + 113, y_start_pos + 4*row_spacing, font_size, "=", justify);
+        dc.drawText(x_start_pos + 2*col_spacing + 77, y_start_pos + 5*row_spacing, font_size, "=", justify);
+        dc.drawText(x_start_pos + 2*col_spacing + 82, y_start_pos + 6*row_spacing, font_size, "=", justify);
+
+        // write all white static text
+        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
+        dc.drawText(x_start_pos + col_spacing + 90, y_start_pos + row_spacing, font_size, "self", justify);
+        dc.drawText(x_start_pos + 2*col_spacing, y_start_pos + 2*row_spacing, font_size, "self.time", justify);
+        dc.drawText(x_start_pos + 2*col_spacing, y_start_pos + 3*row_spacing, font_size, "self.date", justify);
+        dc.drawText(x_start_pos + 2*col_spacing, y_start_pos + 4*row_spacing, font_size, "self.heart_rate", justify);
+        dc.drawText(x_start_pos + 2*col_spacing, y_start_pos + 5*row_spacing, font_size, "self.steps", justify);
+        dc.drawText(x_start_pos + 2*col_spacing, y_start_pos + 6*row_spacing, font_size, "self.power", justify);
+
+        // write all blue static text
+        dc.setColor(Graphics.COLOR_BLUE, Graphics.COLOR_BLACK);
+        dc.drawText(x_start_pos + col_spacing + 30, y_start_pos + row_spacing, font_size, "__init__(", justify);
+        dc.drawText(x_start_pos + col_spacing + 120, y_start_pos + row_spacing, font_size, "):", justify);
+
         // write time string       
         dc.drawText(x_start_pos + 2*col_spacing + 87, y_start_pos + 2*row_spacing, font_size, time_string, justify);
         
