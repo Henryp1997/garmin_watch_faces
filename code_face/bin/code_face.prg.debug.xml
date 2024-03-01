@@ -92,7 +92,7 @@
 <entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceApp.mc" id="15" lineNum="16" parent="globals/code_faceApp" pc="268438243" symbol="onStop"/>
 <entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\bin\\gen\\006-B3869-00\\source\\Rez.mcgen" id="16" lineNum="13" parent="globals/Rez/Layouts" pc="268438246" symbol="WatchFace"/>
 <entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\bin\\gen\\006-B3869-00\\source\\Rez.mcgen" id="16" lineNum="14" parent="globals/Rez/Layouts" pc="268438258" symbol="WatchFace"/>
-<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\bin\\gen\\006-B3869-00\\source\\Rez.mcgen" id="16" lineNum="16" parent="globals/Rez/Layouts" pc="268438357" symbol="WatchFace"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\bin\\gen\\006-B3869-00\\source\\Rez.mcgen" id="16" lineNum="16" parent="globals/Rez/Layouts" pc="268438393" symbol="WatchFace"/>
 </pcToLineNum>
 <symbolTable>
 <entry id="8388639" module="true" symbol="Graphics"/>
@@ -123,6 +123,7 @@
 <entry id="8389122" method="true" symbol="onLayout"/>
 <entry id="8389376" method="true" symbol="onEnterSleep"/>
 <entry field="true" id="8389063" symbol="identifier"/>
+<entry id="8389349" symbol="justification"/>
 <entry id="3" module="true" symbol="globals/Rez/Drawables"/>
 <entry id="8389377" method="true" symbol="onExitSleep"/>
 <entry id="8388644" module="true" symbol="System"/>
@@ -163,8 +164,8 @@
 <entry endPc="268438174" name="battery" stackId="14" startPc="268437000"/>
 <entry endPc="268438174" name="battery_string" stackId="15" startPc="268437000"/>
 <entry endPc="268438174" name="text_col" stackId="16" startPc="268437000"/>
-<entry arg="true" endPc="268438373" name="dc" stackId="1" startPc="268438246"/>
-<entry endPc="268438373" name="rez_cmp_local_text_init_text" stackId="2" startPc="268438258"/>
+<entry arg="true" endPc="268438409" name="dc" stackId="1" startPc="268438246"/>
+<entry endPc="268438409" name="rez_cmp_local_text_TimeLabel" stackId="2" startPc="268438258"/>
 </localVars>
 <annotations>
 <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
@@ -238,7 +239,7 @@
 <param id="state"/>
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268438373" name="WatchFace" parent="Layouts" startPc="268438246">
+<functionEntry accessMode="public" endPc="268438409" name="WatchFace" parent="Layouts" startPc="268438246">
 <param id="dc"/>
 <documentation/>
 </functionEntry>

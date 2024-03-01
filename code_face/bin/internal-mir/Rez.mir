@@ -31,12 +31,12 @@ module Rez {
 C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_bin_gen_006_B3869_00_source_Rez_mcgen_13_73_17_8_start:
 [ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\bin\gen\006-B3869-00\source\Rez.mcgen" 14 12 ]
             [ "C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_bin_gen_006_B3869_00_source_Rez_mcgen_13_73_17_8_start" "C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_bin_gen_006_B3869_00_source_Rez_mcgen_13_73_17_8_stop" ]
-            %rez_cmp_local_text_init_text.1 = local;
+            %rez_cmp_local_text_TimeLabel.1 = local;
             %tmp.3 = getm $.Toybox.WatchUi;
             %tmp.4 = getv function ? %tmp.3 :Text;
-            %tmp.5 = newd 5;
+            %tmp.5 = newd 6;
             %tmp.7 = const :identifier;
-            %tmp.8 = "init_text";
+            %tmp.8 = "TimeLabel";
             %tmp.9 = dup %tmp.5;
             %tmp.10 = aputv %tmp.9 %tmp.7 %tmp.8;
             %tmp.12 = const :color;
@@ -45,26 +45,41 @@ C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_bin_gen_0
             %tmp.15 = dup %tmp.10;
             %tmp.16 = aputv %tmp.15 %tmp.12 %tmp.14;
             %tmp.18 = const :locX;
-            %tmp.19 = 62;
-            %tmp.20 = dup %tmp.16;
-            %tmp.21 = aputv %tmp.20 %tmp.18 %tmp.19;
-            %tmp.23 = const :locY;
-            %tmp.24 = 58;
-            %tmp.25 = dup %tmp.21;
-            %tmp.26 = aputv %tmp.25 %tmp.23 %tmp.24;
-            %tmp.28 = const :font;
+            %tmp.19 = 208;
+            %tmp.20 = 0.5;
+            %tmp.21 = mul %tmp.19 %tmp.20;
+            %tmp.22 = dup %tmp.16;
+            %tmp.23 = aputv %tmp.22 %tmp.18 %tmp.21;
+            %tmp.25 = const :locY;
+            %tmp.26 = 208;
+            %tmp.27 = lgetv %dc;
+            %tmp.28 = getv function %tmp.27 :getFontHeight;
             %tmp.29 = getm $.Toybox.Graphics;
-            %tmp.30 = getv %tmp.29 :FONT_XTINY;
-            %tmp.31 = dup %tmp.26;
-            %tmp.32 = aputv %tmp.31 %tmp.28 %tmp.30;
-            %tmp.1 = newc %tmp.4 (%tmp.32);
-            lputv %rez_cmp_local_text_init_text.1 %tmp.1;
+            %tmp.30 = getv %tmp.29 :FONT_LARGE;
+            %tmp.31 = invoke %tmp.27 %tmp.28(%tmp.30);
+            %tmp.32 = sub %tmp.26 %tmp.31;
+            %tmp.33 = 0.5;
+            %tmp.34 = mul %tmp.32 %tmp.33;
+            %tmp.35 = dup %tmp.23;
+            %tmp.36 = aputv %tmp.35 %tmp.25 %tmp.34;
+            %tmp.38 = const :justification;
+            %tmp.39 = getm $.Toybox.Graphics;
+            %tmp.40 = getv %tmp.39 :TEXT_JUSTIFY_CENTER;
+            %tmp.41 = dup %tmp.36;
+            %tmp.42 = aputv %tmp.41 %tmp.38 %tmp.40;
+            %tmp.44 = const :font;
+            %tmp.45 = getm $.Toybox.Graphics;
+            %tmp.46 = getv %tmp.45 :FONT_LARGE;
+            %tmp.47 = dup %tmp.42;
+            %tmp.48 = aputv %tmp.47 %tmp.44 %tmp.46;
+            %tmp.1 = newc %tmp.4 (%tmp.48);
+            lputv %rez_cmp_local_text_TimeLabel.1 %tmp.1;
 [ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\bin\gen\006-B3869-00\source\Rez.mcgen" 16 12 ]
-            %tmp.33 = newa 1 Array<WatchUi.Drawable>;
-            %tmp.35 = lgetv %rez_cmp_local_text_init_text.1;
-            %tmp.36 = dup %tmp.33;
-            %tmp.37 = aputv %tmp.36 0 %tmp.35;
-            ret %tmp.37;
+            %tmp.49 = newa 1 Array<WatchUi.Drawable>;
+            %tmp.51 = lgetv %rez_cmp_local_text_TimeLabel.1;
+            %tmp.52 = dup %tmp.49;
+            %tmp.53 = aputv %tmp.52 0 %tmp.51;
+            ret %tmp.53;
 C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_bin_gen_006_B3869_00_source_Rez_mcgen_13_73_17_8_stop:
         }
     }
@@ -164,16 +179,16 @@ C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_bin_gen_0
             [ @file = "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\bin\gen\006-B3869-00\source\Rez.mcgen"; @line = 64; ]
             <init> {
 [ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\bin\gen\006-B3869-00\source\Rez.mcgen" 65 18 ]
-                %tmp.38 = getm $.Toybox.Graphics;
-                %tmp.39 = getv %tmp.38 :TEXT_JUSTIFY_CENTER;
-                %tmp.40 = getm $.Toybox.Graphics;
-                %tmp.41 = getv %tmp.40 :TEXT_JUSTIFY_VCENTER;
-                %tmp.42 = bitor %tmp.39 %tmp.41;
-                putv self :justification %tmp.42;
+                %tmp.54 = getm $.Toybox.Graphics;
+                %tmp.55 = getv %tmp.54 :TEXT_JUSTIFY_CENTER;
+                %tmp.56 = getm $.Toybox.Graphics;
+                %tmp.57 = getv %tmp.56 :TEXT_JUSTIFY_VCENTER;
+                %tmp.58 = bitor %tmp.55 %tmp.57;
+                putv self :justification %tmp.58;
 [ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\bin\gen\006-B3869-00\source\Rez.mcgen" 66 18 ]
-                %tmp.43 = getm $.Toybox.Graphics;
-                %tmp.44 = getv %tmp.43 :FONT_XTINY;
-                putv self :font %tmp.44;
+                %tmp.59 = getm $.Toybox.Graphics;
+                %tmp.60 = getv %tmp.59 :FONT_XTINY;
+                putv self :font %tmp.60;
             }
             [ @file = "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\bin\gen\006-B3869-00\source\Rez.mcgen"; @line = 65; @position = 18; ]
             const justification;
@@ -209,9 +224,9 @@ C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_bin_gen_0
             [ @file = "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\bin\gen\006-B3869-00\source\Rez.mcgen"; @line = 81; ]
             <init> {
 [ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\bin\gen\006-B3869-00\source\Rez.mcgen" 83 18 ]
-                %tmp.45 = getm $.Toybox.Graphics;
-                %tmp.46 = getv %tmp.45 :COLOR_TRANSPARENT;
-                putv self :background %tmp.46;
+                %tmp.61 = getm $.Toybox.Graphics;
+                %tmp.62 = getv %tmp.61 :COLOR_TRANSPARENT;
+                putv self :background %tmp.62;
             }
             [ @file = "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\bin\gen\006-B3869-00\source\Rez.mcgen"; @line = 82; @position = 18; ]
             const color as Number = 0xFFFFFF;
@@ -253,16 +268,16 @@ C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_bin_gen_0
             [ @file = "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\bin\gen\006-B3869-00\source\Rez.mcgen"; @line = 101; ]
             <init> {
 [ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\bin\gen\006-B3869-00\source\Rez.mcgen" 102 18 ]
-                %tmp.47 = getm $.Toybox.Graphics;
-                %tmp.48 = getv %tmp.47 :TEXT_JUSTIFY_CENTER;
-                %tmp.49 = getm $.Toybox.Graphics;
-                %tmp.50 = getv %tmp.49 :TEXT_JUSTIFY_VCENTER;
-                %tmp.51 = bitor %tmp.48 %tmp.50;
-                putv self :justification %tmp.51;
+                %tmp.63 = getm $.Toybox.Graphics;
+                %tmp.64 = getv %tmp.63 :TEXT_JUSTIFY_CENTER;
+                %tmp.65 = getm $.Toybox.Graphics;
+                %tmp.66 = getv %tmp.65 :TEXT_JUSTIFY_VCENTER;
+                %tmp.67 = bitor %tmp.64 %tmp.66;
+                putv self :justification %tmp.67;
 [ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\bin\gen\006-B3869-00\source\Rez.mcgen" 103 18 ]
-                %tmp.52 = getm $.Toybox.Graphics;
-                %tmp.53 = getv %tmp.52 :FONT_TINY;
-                putv self :font %tmp.53;
+                %tmp.68 = getm $.Toybox.Graphics;
+                %tmp.69 = getv %tmp.68 :FONT_TINY;
+                putv self :font %tmp.69;
             }
             [ @file = "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\bin\gen\006-B3869-00\source\Rez.mcgen"; @line = 102; @position = 18; ]
             const justification;
@@ -304,9 +319,9 @@ C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_bin_gen_0
             [ @file = "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\bin\gen\006-B3869-00\source\Rez.mcgen"; @line = 121; ]
             <init> {
 [ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\bin\gen\006-B3869-00\source\Rez.mcgen" 122 18 ]
-                %tmp.54 = getm $.Toybox.WatchUi;
-                %tmp.55 = getv %tmp.54 :KEY_ENTER;
-                putv self :button %tmp.55;
+                %tmp.70 = getm $.Toybox.WatchUi;
+                %tmp.71 = getv %tmp.70 :KEY_ENTER;
+                putv self :button %tmp.71;
             }
             [ @file = "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\bin\gen\006-B3869-00\source\Rez.mcgen"; @line = 122; @position = 18; ]
             const button;
@@ -316,13 +331,13 @@ C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_bin_gen_0
             [ @file = "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\bin\gen\006-B3869-00\source\Rez.mcgen"; @line = 125; ]
             <init> {
 [ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\bin\gen\006-B3869-00\source\Rez.mcgen" 126 18 ]
-                %tmp.56 = getm $.Toybox.Graphics;
-                %tmp.57 = getv %tmp.56 :TEXT_JUSTIFY_CENTER;
-                putv self :justification %tmp.57;
+                %tmp.72 = getm $.Toybox.Graphics;
+                %tmp.73 = getv %tmp.72 :TEXT_JUSTIFY_CENTER;
+                putv self :justification %tmp.73;
 [ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\bin\gen\006-B3869-00\source\Rez.mcgen" 127 18 ]
-                %tmp.58 = getm $.Toybox.Graphics;
-                %tmp.59 = getv %tmp.58 :FONT_TINY;
-                putv self :font %tmp.59;
+                %tmp.74 = getm $.Toybox.Graphics;
+                %tmp.75 = getv %tmp.74 :FONT_TINY;
+                putv self :font %tmp.75;
             }
             [ @file = "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\bin\gen\006-B3869-00\source\Rez.mcgen"; @line = 126; @position = 18; ]
             const justification;
@@ -422,9 +437,9 @@ C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_bin_gen_0
             [ @file = "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\bin\gen\006-B3869-00\source\Rez.mcgen"; @line = 174; ]
             <init> {
 [ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\bin\gen\006-B3869-00\source\Rez.mcgen" 175 18 ]
-                %tmp.60 = getm $.Toybox.WatchUi;
-                %tmp.61 = getv %tmp.60 :KEY_ENTER;
-                putv self :button %tmp.61;
+                %tmp.76 = getm $.Toybox.WatchUi;
+                %tmp.77 = getv %tmp.76 :KEY_ENTER;
+                putv self :button %tmp.77;
             }
             [ @file = "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\bin\gen\006-B3869-00\source\Rez.mcgen"; @line = 175; @position = 18; ]
             const button;
@@ -444,9 +459,9 @@ C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_bin_gen_0
             [ @file = "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\bin\gen\006-B3869-00\source\Rez.mcgen"; @line = 183; ]
             <init> {
 [ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\bin\gen\006-B3869-00\source\Rez.mcgen" 184 18 ]
-                %tmp.62 = getm $.Toybox.WatchUi;
-                %tmp.63 = getv %tmp.62 :KEY_ENTER;
-                putv self :button %tmp.63;
+                %tmp.78 = getm $.Toybox.WatchUi;
+                %tmp.79 = getv %tmp.78 :KEY_ENTER;
+                putv self :button %tmp.79;
             }
             [ @file = "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\bin\gen\006-B3869-00\source\Rez.mcgen"; @line = 184; @position = 18; ]
             const button;
@@ -466,9 +481,9 @@ C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_bin_gen_0
             [ @file = "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\bin\gen\006-B3869-00\source\Rez.mcgen"; @line = 192; ]
             <init> {
 [ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\bin\gen\006-B3869-00\source\Rez.mcgen" 194 18 ]
-                %tmp.64 = getm $.Toybox.Graphics;
-                %tmp.65 = getv %tmp.64 :COLOR_TRANSPARENT;
-                putv self :background %tmp.65;
+                %tmp.80 = getm $.Toybox.Graphics;
+                %tmp.81 = getv %tmp.80 :COLOR_TRANSPARENT;
+                putv self :background %tmp.81;
             }
             [ @file = "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\bin\gen\006-B3869-00\source\Rez.mcgen"; @line = 193; @position = 18; ]
             const color as Number = 0x000000;
@@ -498,9 +513,9 @@ C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_bin_gen_0
             [ @file = "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\bin\gen\006-B3869-00\source\Rez.mcgen"; @line = 206; ]
             <init> {
 [ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\bin\gen\006-B3869-00\source\Rez.mcgen" 208 18 ]
-                %tmp.66 = getm $.Toybox.Graphics;
-                %tmp.67 = getv %tmp.66 :COLOR_TRANSPARENT;
-                putv self :background %tmp.67;
+                %tmp.82 = getm $.Toybox.Graphics;
+                %tmp.83 = getv %tmp.82 :COLOR_TRANSPARENT;
+                putv self :background %tmp.83;
             }
             [ @file = "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\bin\gen\006-B3869-00\source\Rez.mcgen"; @line = 207; @position = 18; ]
             const color as Number = 0x000000;
@@ -576,9 +591,9 @@ C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_bin_gen_0
             [ @file = "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\bin\gen\006-B3869-00\source\Rez.mcgen"; @line = 243; ]
             <init> {
 [ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\bin\gen\006-B3869-00\source\Rez.mcgen" 245 18 ]
-                %tmp.68 = getm $.Toybox.Graphics;
-                %tmp.69 = getv %tmp.68 :COLOR_TRANSPARENT;
-                putv self :background %tmp.69;
+                %tmp.84 = getm $.Toybox.Graphics;
+                %tmp.85 = getv %tmp.84 :COLOR_TRANSPARENT;
+                putv self :background %tmp.85;
             }
             [ @file = "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\bin\gen\006-B3869-00\source\Rez.mcgen"; @line = 244; @position = 18; ]
             const color as Number = 0xFFFFFF;
@@ -590,9 +605,9 @@ C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_bin_gen_0
             [ @file = "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\bin\gen\006-B3869-00\source\Rez.mcgen"; @line = 248; ]
             <init> {
 [ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\bin\gen\006-B3869-00\source\Rez.mcgen" 249 18 ]
-                %tmp.70 = getm $.Toybox.WatchUi;
-                %tmp.71 = getv %tmp.70 :KEY_DOWN;
-                putv self :button %tmp.71;
+                %tmp.86 = getm $.Toybox.WatchUi;
+                %tmp.87 = getv %tmp.86 :KEY_DOWN;
+                putv self :button %tmp.87;
             }
             [ @file = "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\bin\gen\006-B3869-00\source\Rez.mcgen"; @line = 249; @position = 18; ]
             const button;
@@ -626,9 +641,9 @@ C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_bin_gen_0
             [ @file = "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\bin\gen\006-B3869-00\source\Rez.mcgen"; @line = 264; ]
             <init> {
 [ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\bin\gen\006-B3869-00\source\Rez.mcgen" 266 18 ]
-                %tmp.72 = getm $.Toybox.Graphics;
-                %tmp.73 = getv %tmp.72 :COLOR_TRANSPARENT;
-                putv self :background %tmp.73;
+                %tmp.88 = getm $.Toybox.Graphics;
+                %tmp.89 = getv %tmp.88 :COLOR_TRANSPARENT;
+                putv self :background %tmp.89;
             }
             [ @file = "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\bin\gen\006-B3869-00\source\Rez.mcgen"; @line = 265; @position = 18; ]
             const color as Number = 0x000000;
@@ -710,9 +725,9 @@ C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_bin_gen_0
             [ @file = "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\bin\gen\006-B3869-00\source\Rez.mcgen"; @line = 304; ]
             <init> {
 [ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\bin\gen\006-B3869-00\source\Rez.mcgen" 306 18 ]
-                %tmp.74 = getm $.Toybox.Graphics;
-                %tmp.75 = getv %tmp.74 :COLOR_TRANSPARENT;
-                putv self :background %tmp.75;
+                %tmp.90 = getm $.Toybox.Graphics;
+                %tmp.91 = getv %tmp.90 :COLOR_TRANSPARENT;
+                putv self :background %tmp.91;
             }
             [ @file = "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\bin\gen\006-B3869-00\source\Rez.mcgen"; @line = 305; @position = 18; ]
             const color as Number = 0xFFFFFF;
@@ -724,9 +739,9 @@ C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_bin_gen_0
             [ @file = "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\bin\gen\006-B3869-00\source\Rez.mcgen"; @line = 309; ]
             <init> {
 [ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\bin\gen\006-B3869-00\source\Rez.mcgen" 311 18 ]
-                %tmp.76 = getm $.Toybox.Graphics;
-                %tmp.77 = getv %tmp.76 :COLOR_TRANSPARENT;
-                putv self :background %tmp.77;
+                %tmp.92 = getm $.Toybox.Graphics;
+                %tmp.93 = getv %tmp.92 :COLOR_TRANSPARENT;
+                putv self :background %tmp.93;
             }
             [ @file = "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\bin\gen\006-B3869-00\source\Rez.mcgen"; @line = 310; @position = 18; ]
             const color as Number = 0xFFFFFF;
@@ -776,9 +791,9 @@ C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_bin_gen_0
             [ @file = "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\bin\gen\006-B3869-00\source\Rez.mcgen"; @line = 333; ]
             <init> {
 [ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\bin\gen\006-B3869-00\source\Rez.mcgen" 335 18 ]
-                %tmp.78 = getm $.Toybox.Graphics;
-                %tmp.79 = getv %tmp.78 :COLOR_TRANSPARENT;
-                putv self :background %tmp.79;
+                %tmp.94 = getm $.Toybox.Graphics;
+                %tmp.95 = getv %tmp.94 :COLOR_TRANSPARENT;
+                putv self :background %tmp.95;
             }
             [ @file = "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\bin\gen\006-B3869-00\source\Rez.mcgen"; @line = 334; @position = 18; ]
             const color as Number = 0x000000;
@@ -990,9 +1005,9 @@ C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_bin_gen_0
             [ @file = "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\bin\gen\006-B3869-00\source\Rez.mcgen"; @line = 438; ]
             <init> {
 [ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\bin\gen\006-B3869-00\source\Rez.mcgen" 440 18 ]
-                %tmp.80 = getm $.Toybox.Graphics;
-                %tmp.81 = getv %tmp.80 :COLOR_TRANSPARENT;
-                putv self :background %tmp.81;
+                %tmp.96 = getm $.Toybox.Graphics;
+                %tmp.97 = getv %tmp.96 :COLOR_TRANSPARENT;
+                putv self :background %tmp.97;
             }
             [ @file = "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\bin\gen\006-B3869-00\source\Rez.mcgen"; @line = 439; @position = 18; ]
             const color as Number = 0x000000;
@@ -1014,9 +1029,9 @@ C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_bin_gen_0
             [ @file = "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\bin\gen\006-B3869-00\source\Rez.mcgen"; @line = 448; ]
             <init> {
 [ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\bin\gen\006-B3869-00\source\Rez.mcgen" 449 18 ]
-                %tmp.82 = getm $.Toybox.WatchUi;
-                %tmp.83 = getv %tmp.82 :KEY_DOWN;
-                putv self :button %tmp.83;
+                %tmp.98 = getm $.Toybox.WatchUi;
+                %tmp.99 = getv %tmp.98 :KEY_DOWN;
+                putv self :button %tmp.99;
             }
             [ @file = "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\bin\gen\006-B3869-00\source\Rez.mcgen"; @line = 449; @position = 18; ]
             const button;
@@ -1162,9 +1177,9 @@ C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_bin_gen_0
             [ @file = "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\bin\gen\006-B3869-00\source\Rez.mcgen"; @line = 520; ]
             <init> {
 [ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\bin\gen\006-B3869-00\source\Rez.mcgen" 522 18 ]
-                %tmp.84 = getm $.Toybox.System;
-                %tmp.85 = getv %tmp.84 :SCREEN_SHAPE_ROUND;
-                putv self :screenShape %tmp.85;
+                %tmp.100 = getm $.Toybox.System;
+                %tmp.101 = getv %tmp.100 :SCREEN_SHAPE_ROUND;
+                putv self :screenShape %tmp.101;
             }
             [ @file = "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\bin\gen\006-B3869-00\source\Rez.mcgen"; @line = 521; @position = 18; ]
             const screenWidth as Number = 208;
@@ -1184,16 +1199,16 @@ C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_bin_gen_0
             [ @file = "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\bin\gen\006-B3869-00\source\Rez.mcgen"; @line = 529; ]
             <init> {
 [ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\bin\gen\006-B3869-00\source\Rez.mcgen" 530 18 ]
-                %tmp.86 = getm $.Toybox.Graphics;
-                %tmp.87 = getv %tmp.86 :TEXT_JUSTIFY_CENTER;
-                %tmp.88 = getm $.Toybox.Graphics;
-                %tmp.89 = getv %tmp.88 :TEXT_JUSTIFY_VCENTER;
-                %tmp.90 = bitor %tmp.87 %tmp.89;
-                putv self :justification %tmp.90;
+                %tmp.102 = getm $.Toybox.Graphics;
+                %tmp.103 = getv %tmp.102 :TEXT_JUSTIFY_CENTER;
+                %tmp.104 = getm $.Toybox.Graphics;
+                %tmp.105 = getv %tmp.104 :TEXT_JUSTIFY_VCENTER;
+                %tmp.106 = bitor %tmp.103 %tmp.105;
+                putv self :justification %tmp.106;
 [ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\bin\gen\006-B3869-00\source\Rez.mcgen" 531 18 ]
-                %tmp.91 = getm $.Toybox.Graphics;
-                %tmp.92 = getv %tmp.91 :FONT_TINY;
-                putv self :font %tmp.92;
+                %tmp.107 = getm $.Toybox.Graphics;
+                %tmp.108 = getv %tmp.107 :FONT_TINY;
+                putv self :font %tmp.108;
             }
             [ @file = "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\bin\gen\006-B3869-00\source\Rez.mcgen"; @line = 530; @position = 18; ]
             const justification;
@@ -1251,9 +1266,9 @@ C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_bin_gen_0
             [ @file = "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\bin\gen\006-B3869-00\source\Rez.mcgen"; @line = 557; ]
             <init> {
 [ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\bin\gen\006-B3869-00\source\Rez.mcgen" 559 18 ]
-                %tmp.93 = getm $.Toybox.Graphics;
-                %tmp.94 = getv %tmp.93 :COLOR_TRANSPARENT;
-                putv self :background %tmp.94;
+                %tmp.109 = getm $.Toybox.Graphics;
+                %tmp.110 = getv %tmp.109 :COLOR_TRANSPARENT;
+                putv self :background %tmp.110;
             }
             [ @file = "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\bin\gen\006-B3869-00\source\Rez.mcgen"; @line = 558; @position = 18; ]
             const color as Number = 0xFFFFFF;
