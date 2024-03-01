@@ -320,7 +320,7 @@ C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_co
 [ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 80 12 ]
         %tmp.137 = getm $.Toybox.Lang;
         %tmp.138 = getv function %tmp.137 :format;
-        %tmp.139 = "'$1$'";
+        %tmp.139 = "$1$";
         %tmp.140 = newa 1;
         %tmp.142 = lgetv %HR.10;
         %tmp.143 = dup %tmp.140;
@@ -332,7 +332,7 @@ C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_co
 C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_79_8_84_8_if_false:
 C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_82_13_84_8_start:
 [ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 83 12 ]
-        %tmp.146 = "'--'";
+        %tmp.146 = "--";
         lputv %hr_string.9 %tmp.146;
 C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_82_13_84_8_stop:
 C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_79_8_84_8_if_end:
@@ -358,7 +358,7 @@ C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_co
 [ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 90 12 ]
         %tmp.154 = getm $.Toybox.Lang;
         %tmp.155 = getv function %tmp.154 :format;
-        %tmp.156 = "'$1$'";
+        %tmp.156 = "$1$";
         %tmp.157 = newa 1;
         %tmp.159 = lgetv %steps.12;
         %tmp.160 = dup %tmp.157;
@@ -370,7 +370,7 @@ C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_co
 C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_89_8_94_8_if_false:
 C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_92_13_94_8_start:
 [ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 93 12 ]
-        %tmp.163 = "'--'";
+        %tmp.163 = "--";
         lputv %steps_string.11 %tmp.163;
 C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_92_13_94_8_stop:
 C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_89_8_94_8_if_end:

@@ -77,20 +77,20 @@ class code_faceView extends WatchUi.WatchFace {
         var hr_string = "--";
         var HR = Activity.getActivityInfo().currentHeartRate;
         if (HR) {
-            hr_string = Lang.format("'$1$'", [HR]);
+            hr_string = Lang.format("$1$", [HR]);
         }
         else {
-            hr_string = "'--'";
+            hr_string = "--";
         }
 
         // update steps string
         var steps_string = "--";
         var steps = ActivityMonitor.getInfo().steps;
         if (steps) {
-            steps_string = Lang.format("'$1$'", [steps]);
+            steps_string = Lang.format("$1$", [steps]);
         }
         else {
-            steps_string = "'--'";
+            steps_string = "--";
         }
 
         // update battery string
