@@ -1,0 +1,838 @@
+[ @file = "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc"; @line = 1; ]
+import Toybox.Graphics;
+[ @file = "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc"; @line = 2; ]
+import Toybox.Lang;
+[ @file = "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc"; @line = 3; ]
+import Toybox.System;
+[ @file = "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc"; @line = 4; ]
+import Toybox.WatchUi;
+[ @file = "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc"; @line = 5; ]
+import Toybox.Time;
+[ @file = "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc"; @line = 6; ]
+import Toybox.Time.Gregorian;
+[ @file = "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc"; @line = 7; ]
+import Toybox.ActivityMonitor;
+[ @file = "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc"; @line = 8; ]
+import Toybox.Activity;
+[ @file = "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc"; @line = 10; ]
+class code_faceView extends WatchUi.WatchFace{
+    [ @file = "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc"; @line = 10; ]
+    <init> {
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 16 8 ]
+        %tmp.1 = getm $.Toybox.Graphics;
+        %tmp.2 = getv %tmp.1 :FONT_SYSTEM_XTINY;
+        putv self :font_size %tmp.2;
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 17 8 ]
+        %tmp.3 = getm $.Toybox.Graphics;
+        %tmp.4 = getv %tmp.3 :TEXT_JUSTIFY_LEFT;
+        putv self :justify %tmp.4;
+    }
+    [ @file = "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc"; @line = 10; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc"; @line = 12; @position = 8; ]
+    var x_start_pos = 22;
+    [ @file = "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc"; @line = 13; @position = 8; ]
+    var y_start_pos = 38;
+    [ @file = "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc"; @line = 14; @position = 8; ]
+    var col_spacing = 10;
+    [ @file = "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc"; @line = 15; @position = 8; ]
+    var row_spacing = 20;
+    [ @file = "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc"; @line = 16; @position = 8; ]
+    var font_size;
+    [ @file = "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc"; @line = 17; @position = 8; ]
+    var justify;
+    [ @file = "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc"; @line = 18; @position = 8; ]
+    var sleeping = false;
+    [ @file = "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc"; @line = 20; ]
+    function initialize() as Void {
+C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_20_26_22_4_start:
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 21 8 ]
+        %tmp.2 = getv ? :WatchFace;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_20_26_22_4_stop:
+    }
+    [ @file = "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc"; @line = 25; ]
+    function onLayout(dc) {
+C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_25_26_55_4_start:
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 26 8 ]
+        %tmp.1 = self;
+        %tmp.2 = getv function %tmp.1 :setLayout;
+        %tmp.4 = getv ? :Rez;
+        %tmp.5 = getv %tmp.4 :Layouts;
+        %tmp.6 = getv function %tmp.5 :WatchFace;
+        %tmp.8 = lgetv %dc;
+        %tmp.9 = invoke %tmp.5 %tmp.6(%tmp.8);
+        invoke %tmp.1 %tmp.2(%tmp.9);
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 27 8 ]
+        %tmp.10 = lgetv %dc;
+        %tmp.11 = getv function %tmp.10 :setColor;
+        %tmp.12 = getm $.Toybox.Graphics;
+        %tmp.13 = getv %tmp.12 :COLOR_BLACK;
+        %tmp.14 = getm $.Toybox.Graphics;
+        %tmp.15 = getv %tmp.14 :COLOR_BLACK;
+        invoke %tmp.10 %tmp.11(%tmp.13, %tmp.15);
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 28 8 ]
+        %tmp.16 = lgetv %dc;
+        %tmp.17 = getv function %tmp.16 :fillRectangle;
+        %tmp.18 = 0;
+        %tmp.19 = 0;
+        %tmp.20 = lgetv %dc;
+        %tmp.21 = getv function %tmp.20 :getWidth;
+        %tmp.22 = invoke %tmp.20 %tmp.21();
+        %tmp.23 = lgetv %dc;
+        %tmp.24 = getv function %tmp.23 :getHeight;
+        %tmp.25 = invoke %tmp.23 %tmp.24();
+        invoke %tmp.16 %tmp.17(%tmp.18, %tmp.19, %tmp.22, %tmp.25);
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 29 8 ]
+        %tmp.26 = lgetv %dc;
+        %tmp.27 = getv function %tmp.26 :clear;
+        invoke %tmp.26 %tmp.27();
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 32 8 ]
+        %tmp.28 = lgetv %dc;
+        %tmp.29 = getv function %tmp.28 :setColor;
+        %tmp.30 = getm $.Toybox.Graphics;
+        %tmp.31 = getv %tmp.30 :COLOR_ORANGE;
+        %tmp.32 = getm $.Toybox.Graphics;
+        %tmp.33 = getv %tmp.32 :COLOR_BLACK;
+        invoke %tmp.28 %tmp.29(%tmp.31, %tmp.33);
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 33 8 ]
+        %tmp.34 = lgetv %dc;
+        %tmp.35 = getv function %tmp.34 :drawText;
+        %tmp.37 = getv ? :x_start_pos;
+        %tmp.39 = getv ? :y_start_pos;
+        %tmp.41 = getv ? :font_size;
+        %tmp.42 = "Class WatchFace:";
+        %tmp.44 = getv ? :justify;
+        invoke %tmp.34 %tmp.35(%tmp.37, %tmp.39, %tmp.41, %tmp.42, %tmp.44);
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 34 8 ]
+        %tmp.45 = lgetv %dc;
+        %tmp.46 = getv function %tmp.45 :drawText;
+        %tmp.48 = getv ? :x_start_pos;
+        %tmp.50 = getv ? :col_spacing;
+        %tmp.51 = add %tmp.48 %tmp.50;
+        %tmp.53 = getv ? :y_start_pos;
+        %tmp.55 = getv ? :row_spacing;
+        %tmp.56 = add %tmp.53 %tmp.55;
+        %tmp.58 = getv ? :font_size;
+        %tmp.59 = "def";
+        %tmp.61 = getv ? :justify;
+        invoke %tmp.45 %tmp.46(%tmp.51, %tmp.56, %tmp.58, %tmp.59, %tmp.61);
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 35 8 ]
+        %tmp.62 = lgetv %dc;
+        %tmp.63 = getv function %tmp.62 :drawText;
+        %tmp.65 = getv ? :x_start_pos;
+        %tmp.66 = 2;
+        %tmp.68 = getv ? :col_spacing;
+        %tmp.69 = mul %tmp.66 %tmp.68;
+        %tmp.70 = add %tmp.65 %tmp.69;
+        %tmp.71 = 72;
+        %tmp.72 = add %tmp.70 %tmp.71;
+        %tmp.74 = getv ? :y_start_pos;
+        %tmp.75 = 2;
+        %tmp.77 = getv ? :row_spacing;
+        %tmp.78 = mul %tmp.75 %tmp.77;
+        %tmp.79 = add %tmp.74 %tmp.78;
+        %tmp.81 = getv ? :font_size;
+        %tmp.82 = "=";
+        %tmp.84 = getv ? :justify;
+        invoke %tmp.62 %tmp.63(%tmp.72, %tmp.79, %tmp.81, %tmp.82, %tmp.84);
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 36 8 ]
+        %tmp.85 = lgetv %dc;
+        %tmp.86 = getv function %tmp.85 :drawText;
+        %tmp.88 = getv ? :x_start_pos;
+        %tmp.89 = 2;
+        %tmp.91 = getv ? :col_spacing;
+        %tmp.92 = mul %tmp.89 %tmp.91;
+        %tmp.93 = add %tmp.88 %tmp.92;
+        %tmp.94 = 72;
+        %tmp.95 = add %tmp.93 %tmp.94;
+        %tmp.97 = getv ? :y_start_pos;
+        %tmp.98 = 3;
+        %tmp.100 = getv ? :row_spacing;
+        %tmp.101 = mul %tmp.98 %tmp.100;
+        %tmp.102 = add %tmp.97 %tmp.101;
+        %tmp.104 = getv ? :font_size;
+        %tmp.105 = "=";
+        %tmp.107 = getv ? :justify;
+        invoke %tmp.85 %tmp.86(%tmp.95, %tmp.102, %tmp.104, %tmp.105, %tmp.107);
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 37 8 ]
+        %tmp.108 = lgetv %dc;
+        %tmp.109 = getv function %tmp.108 :drawText;
+        %tmp.111 = getv ? :x_start_pos;
+        %tmp.112 = 2;
+        %tmp.114 = getv ? :col_spacing;
+        %tmp.115 = mul %tmp.112 %tmp.114;
+        %tmp.116 = add %tmp.111 %tmp.115;
+        %tmp.117 = 113;
+        %tmp.118 = add %tmp.116 %tmp.117;
+        %tmp.120 = getv ? :y_start_pos;
+        %tmp.121 = 4;
+        %tmp.123 = getv ? :row_spacing;
+        %tmp.124 = mul %tmp.121 %tmp.123;
+        %tmp.125 = add %tmp.120 %tmp.124;
+        %tmp.127 = getv ? :font_size;
+        %tmp.128 = "=";
+        %tmp.130 = getv ? :justify;
+        invoke %tmp.108 %tmp.109(%tmp.118, %tmp.125, %tmp.127, %tmp.128, %tmp.130);
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 38 8 ]
+        %tmp.131 = lgetv %dc;
+        %tmp.132 = getv function %tmp.131 :drawText;
+        %tmp.134 = getv ? :x_start_pos;
+        %tmp.135 = 2;
+        %tmp.137 = getv ? :col_spacing;
+        %tmp.138 = mul %tmp.135 %tmp.137;
+        %tmp.139 = add %tmp.134 %tmp.138;
+        %tmp.140 = 77;
+        %tmp.141 = add %tmp.139 %tmp.140;
+        %tmp.143 = getv ? :y_start_pos;
+        %tmp.144 = 5;
+        %tmp.146 = getv ? :row_spacing;
+        %tmp.147 = mul %tmp.144 %tmp.146;
+        %tmp.148 = add %tmp.143 %tmp.147;
+        %tmp.150 = getv ? :font_size;
+        %tmp.151 = "=";
+        %tmp.153 = getv ? :justify;
+        invoke %tmp.131 %tmp.132(%tmp.141, %tmp.148, %tmp.150, %tmp.151, %tmp.153);
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 39 8 ]
+        %tmp.154 = lgetv %dc;
+        %tmp.155 = getv function %tmp.154 :drawText;
+        %tmp.157 = getv ? :x_start_pos;
+        %tmp.158 = 2;
+        %tmp.160 = getv ? :col_spacing;
+        %tmp.161 = mul %tmp.158 %tmp.160;
+        %tmp.162 = add %tmp.157 %tmp.161;
+        %tmp.163 = 82;
+        %tmp.164 = add %tmp.162 %tmp.163;
+        %tmp.166 = getv ? :y_start_pos;
+        %tmp.167 = 6;
+        %tmp.169 = getv ? :row_spacing;
+        %tmp.170 = mul %tmp.167 %tmp.169;
+        %tmp.171 = add %tmp.166 %tmp.170;
+        %tmp.173 = getv ? :font_size;
+        %tmp.174 = "=";
+        %tmp.176 = getv ? :justify;
+        invoke %tmp.154 %tmp.155(%tmp.164, %tmp.171, %tmp.173, %tmp.174, %tmp.176);
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 42 8 ]
+        %tmp.177 = lgetv %dc;
+        %tmp.178 = getv function %tmp.177 :setColor;
+        %tmp.179 = getm $.Toybox.Graphics;
+        %tmp.180 = getv %tmp.179 :COLOR_WHITE;
+        %tmp.181 = getm $.Toybox.Graphics;
+        %tmp.182 = getv %tmp.181 :COLOR_BLACK;
+        invoke %tmp.177 %tmp.178(%tmp.180, %tmp.182);
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 43 8 ]
+        %tmp.183 = lgetv %dc;
+        %tmp.184 = getv function %tmp.183 :drawText;
+        %tmp.186 = getv ? :x_start_pos;
+        %tmp.188 = getv ? :col_spacing;
+        %tmp.189 = add %tmp.186 %tmp.188;
+        %tmp.190 = 90;
+        %tmp.191 = add %tmp.189 %tmp.190;
+        %tmp.193 = getv ? :y_start_pos;
+        %tmp.195 = getv ? :row_spacing;
+        %tmp.196 = add %tmp.193 %tmp.195;
+        %tmp.198 = getv ? :font_size;
+        %tmp.199 = "self";
+        %tmp.201 = getv ? :justify;
+        invoke %tmp.183 %tmp.184(%tmp.191, %tmp.196, %tmp.198, %tmp.199, %tmp.201);
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 44 8 ]
+        %tmp.202 = lgetv %dc;
+        %tmp.203 = getv function %tmp.202 :drawText;
+        %tmp.205 = getv ? :x_start_pos;
+        %tmp.206 = 2;
+        %tmp.208 = getv ? :col_spacing;
+        %tmp.209 = mul %tmp.206 %tmp.208;
+        %tmp.210 = add %tmp.205 %tmp.209;
+        %tmp.212 = getv ? :y_start_pos;
+        %tmp.213 = 2;
+        %tmp.215 = getv ? :row_spacing;
+        %tmp.216 = mul %tmp.213 %tmp.215;
+        %tmp.217 = add %tmp.212 %tmp.216;
+        %tmp.219 = getv ? :font_size;
+        %tmp.220 = "self.time";
+        %tmp.222 = getv ? :justify;
+        invoke %tmp.202 %tmp.203(%tmp.210, %tmp.217, %tmp.219, %tmp.220, %tmp.222);
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 45 8 ]
+        %tmp.223 = lgetv %dc;
+        %tmp.224 = getv function %tmp.223 :drawText;
+        %tmp.226 = getv ? :x_start_pos;
+        %tmp.227 = 2;
+        %tmp.229 = getv ? :col_spacing;
+        %tmp.230 = mul %tmp.227 %tmp.229;
+        %tmp.231 = add %tmp.226 %tmp.230;
+        %tmp.233 = getv ? :y_start_pos;
+        %tmp.234 = 3;
+        %tmp.236 = getv ? :row_spacing;
+        %tmp.237 = mul %tmp.234 %tmp.236;
+        %tmp.238 = add %tmp.233 %tmp.237;
+        %tmp.240 = getv ? :font_size;
+        %tmp.241 = "self.date";
+        %tmp.243 = getv ? :justify;
+        invoke %tmp.223 %tmp.224(%tmp.231, %tmp.238, %tmp.240, %tmp.241, %tmp.243);
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 46 8 ]
+        %tmp.244 = lgetv %dc;
+        %tmp.245 = getv function %tmp.244 :drawText;
+        %tmp.247 = getv ? :x_start_pos;
+        %tmp.248 = 2;
+        %tmp.250 = getv ? :col_spacing;
+        %tmp.251 = mul %tmp.248 %tmp.250;
+        %tmp.252 = add %tmp.247 %tmp.251;
+        %tmp.254 = getv ? :y_start_pos;
+        %tmp.255 = 4;
+        %tmp.257 = getv ? :row_spacing;
+        %tmp.258 = mul %tmp.255 %tmp.257;
+        %tmp.259 = add %tmp.254 %tmp.258;
+        %tmp.261 = getv ? :font_size;
+        %tmp.262 = "self.heart_rate";
+        %tmp.264 = getv ? :justify;
+        invoke %tmp.244 %tmp.245(%tmp.252, %tmp.259, %tmp.261, %tmp.262, %tmp.264);
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 47 8 ]
+        %tmp.265 = lgetv %dc;
+        %tmp.266 = getv function %tmp.265 :drawText;
+        %tmp.268 = getv ? :x_start_pos;
+        %tmp.269 = 2;
+        %tmp.271 = getv ? :col_spacing;
+        %tmp.272 = mul %tmp.269 %tmp.271;
+        %tmp.273 = add %tmp.268 %tmp.272;
+        %tmp.275 = getv ? :y_start_pos;
+        %tmp.276 = 5;
+        %tmp.278 = getv ? :row_spacing;
+        %tmp.279 = mul %tmp.276 %tmp.278;
+        %tmp.280 = add %tmp.275 %tmp.279;
+        %tmp.282 = getv ? :font_size;
+        %tmp.283 = "self.steps";
+        %tmp.285 = getv ? :justify;
+        invoke %tmp.265 %tmp.266(%tmp.273, %tmp.280, %tmp.282, %tmp.283, %tmp.285);
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 48 8 ]
+        %tmp.286 = lgetv %dc;
+        %tmp.287 = getv function %tmp.286 :drawText;
+        %tmp.289 = getv ? :x_start_pos;
+        %tmp.290 = 2;
+        %tmp.292 = getv ? :col_spacing;
+        %tmp.293 = mul %tmp.290 %tmp.292;
+        %tmp.294 = add %tmp.289 %tmp.293;
+        %tmp.296 = getv ? :y_start_pos;
+        %tmp.297 = 6;
+        %tmp.299 = getv ? :row_spacing;
+        %tmp.300 = mul %tmp.297 %tmp.299;
+        %tmp.301 = add %tmp.296 %tmp.300;
+        %tmp.303 = getv ? :font_size;
+        %tmp.304 = "self.power";
+        %tmp.306 = getv ? :justify;
+        invoke %tmp.286 %tmp.287(%tmp.294, %tmp.301, %tmp.303, %tmp.304, %tmp.306);
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 51 8 ]
+        %tmp.307 = lgetv %dc;
+        %tmp.308 = getv function %tmp.307 :setColor;
+        %tmp.309 = getm $.Toybox.Graphics;
+        %tmp.310 = getv %tmp.309 :COLOR_BLUE;
+        %tmp.311 = getm $.Toybox.Graphics;
+        %tmp.312 = getv %tmp.311 :COLOR_BLACK;
+        invoke %tmp.307 %tmp.308(%tmp.310, %tmp.312);
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 52 8 ]
+        %tmp.313 = lgetv %dc;
+        %tmp.314 = getv function %tmp.313 :drawText;
+        %tmp.316 = getv ? :x_start_pos;
+        %tmp.318 = getv ? :col_spacing;
+        %tmp.319 = add %tmp.316 %tmp.318;
+        %tmp.320 = 30;
+        %tmp.321 = add %tmp.319 %tmp.320;
+        %tmp.323 = getv ? :y_start_pos;
+        %tmp.325 = getv ? :row_spacing;
+        %tmp.326 = add %tmp.323 %tmp.325;
+        %tmp.328 = getv ? :font_size;
+        %tmp.329 = "__init__(";
+        %tmp.331 = getv ? :justify;
+        invoke %tmp.313 %tmp.314(%tmp.321, %tmp.326, %tmp.328, %tmp.329, %tmp.331);
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 53 8 ]
+        %tmp.332 = lgetv %dc;
+        %tmp.333 = getv function %tmp.332 :drawText;
+        %tmp.335 = getv ? :x_start_pos;
+        %tmp.337 = getv ? :col_spacing;
+        %tmp.338 = add %tmp.335 %tmp.337;
+        %tmp.339 = 120;
+        %tmp.340 = add %tmp.338 %tmp.339;
+        %tmp.342 = getv ? :y_start_pos;
+        %tmp.344 = getv ? :row_spacing;
+        %tmp.345 = add %tmp.342 %tmp.344;
+        %tmp.347 = getv ? :font_size;
+        %tmp.348 = "):";
+        %tmp.350 = getv ? :justify;
+        invoke %tmp.332 %tmp.333(%tmp.340, %tmp.345, %tmp.347, %tmp.348, %tmp.350);
+C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_25_26_55_4_stop:
+    }
+    [ @file = "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc"; @line = 60; ]
+    function onShow() as Void {
+    }
+    [ @file = "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc"; @line = 64; ]
+    function onUpdate(dc) {
+C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_64_26_147_4_start:
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 67 8 ]
+        [ "C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_64_26_147_4_start" "C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_64_26_147_4_stop" ]
+        %today.1 = local;
+        %tmp.1 = getm $.Toybox.Time.Gregorian;
+        %tmp.2 = getv function %tmp.1 :info;
+        %tmp.3 = getm $.Toybox.Time;
+        %tmp.4 = getv function %tmp.3 :now;
+        %tmp.5 = invoke %tmp.3 %tmp.4();
+        %tmp.6 = getm $.Toybox.Time;
+        %tmp.7 = getv %tmp.6 :FORMAT_SHORT;
+        %tmp.8 = invoke %tmp.1 %tmp.2(%tmp.5, %tmp.7);
+        lputv %today.1 %tmp.8;
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 68 8 ]
+        [ "C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_64_26_147_4_start" "C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_64_26_147_4_stop" ]
+        %day_string.2 = local;
+        %tmp.9 = lgetv %today.1;
+        %tmp.10 = getv %tmp.9 :day;
+        lputv %day_string.2 %tmp.10;
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 69 8 ]
+        [ "C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_64_26_147_4_start" "C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_64_26_147_4_stop" ]
+        %month_string.3 = local;
+        %tmp.11 = lgetv %today.1;
+        %tmp.12 = getv %tmp.11 :month;
+        lputv %month_string.3 %tmp.12;
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 70 8 ]
+        [ "C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_64_26_147_4_start" "C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_64_26_147_4_stop" ]
+        %hour_string.4 = local;
+        %tmp.13 = lgetv %today.1;
+        %tmp.14 = getv %tmp.13 :hour;
+        lputv %hour_string.4 %tmp.14;
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 71 8 ]
+        [ "C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_64_26_147_4_start" "C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_64_26_147_4_stop" ]
+        %min_string.5 = local;
+        %tmp.15 = lgetv %today.1;
+        %tmp.16 = getv %tmp.15 :min;
+        lputv %min_string.5 %tmp.16;
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 72 8 ]
+        [ "C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_64_26_147_4_start" "C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_64_26_147_4_stop" ]
+        %sec_string.6 = local;
+        %tmp.17 = lgetv %today.1;
+        %tmp.18 = getv %tmp.17 :sec;
+        lputv %sec_string.6 %tmp.18;
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 73 8 ]
+C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_73_8_75_8_if_stmt:
+        %tmp.19 = lgetv %today.1;
+        %tmp.20 = getv %tmp.19 :day;
+        %tmp.21 = getv function %tmp.20 :toNumber;
+        %tmp.22 = invoke %tmp.20 %tmp.21();
+        %tmp.23 = 10;
+        %tmp.24 = lt %tmp.22 %tmp.23;
+        bf %tmp.24 @C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_73_8_75_8_if_end;
+C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_73_8_75_8_if_true:
+C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_73_39_75_8_start:
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 74 12 ]
+        %tmp.25 = "0";
+        %tmp.27 = lgetv %day_string.2;
+        %tmp.28 = add %tmp.25 %tmp.27;
+        lputv %day_string.2 %tmp.28;
+C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_73_39_75_8_stop:
+        goto @C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_73_8_75_8_if_end;
+C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_73_8_75_8_if_end:
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 76 8 ]
+C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_76_8_78_8_if_stmt:
+        %tmp.29 = lgetv %today.1;
+        %tmp.30 = getv %tmp.29 :month;
+        %tmp.31 = getv function %tmp.30 :toNumber;
+        %tmp.32 = invoke %tmp.30 %tmp.31();
+        %tmp.33 = 10;
+        %tmp.34 = lt %tmp.32 %tmp.33;
+        bf %tmp.34 @C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_76_8_78_8_if_end;
+C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_76_8_78_8_if_true:
+C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_76_41_78_8_start:
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 77 12 ]
+        %tmp.35 = "0";
+        %tmp.37 = lgetv %month_string.3;
+        %tmp.38 = add %tmp.35 %tmp.37;
+        lputv %month_string.3 %tmp.38;
+C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_76_41_78_8_stop:
+        goto @C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_76_8_78_8_if_end;
+C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_76_8_78_8_if_end:
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 79 8 ]
+C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_79_8_81_8_if_stmt:
+        %tmp.39 = lgetv %today.1;
+        %tmp.40 = getv %tmp.39 :hour;
+        %tmp.41 = getv function %tmp.40 :toNumber;
+        %tmp.42 = invoke %tmp.40 %tmp.41();
+        %tmp.43 = 10;
+        %tmp.44 = lt %tmp.42 %tmp.43;
+        bf %tmp.44 @C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_79_8_81_8_if_end;
+C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_79_8_81_8_if_true:
+C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_79_40_81_8_start:
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 80 12 ]
+        %tmp.45 = "0";
+        %tmp.47 = lgetv %hour_string.4;
+        %tmp.48 = add %tmp.45 %tmp.47;
+        lputv %hour_string.4 %tmp.48;
+C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_79_40_81_8_stop:
+        goto @C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_79_8_81_8_if_end;
+C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_79_8_81_8_if_end:
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 82 8 ]
+C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_82_8_84_8_if_stmt:
+        %tmp.49 = lgetv %today.1;
+        %tmp.50 = getv %tmp.49 :min;
+        %tmp.51 = getv function %tmp.50 :toNumber;
+        %tmp.52 = invoke %tmp.50 %tmp.51();
+        %tmp.53 = 10;
+        %tmp.54 = lt %tmp.52 %tmp.53;
+        bf %tmp.54 @C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_82_8_84_8_if_end;
+C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_82_8_84_8_if_true:
+C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_82_39_84_8_start:
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 83 12 ]
+        %tmp.55 = "0";
+        %tmp.57 = lgetv %min_string.5;
+        %tmp.58 = add %tmp.55 %tmp.57;
+        lputv %min_string.5 %tmp.58;
+C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_82_39_84_8_stop:
+        goto @C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_82_8_84_8_if_end;
+C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_82_8_84_8_if_end:
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 85 8 ]
+        [ "C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_64_26_147_4_start" "C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_64_26_147_4_stop" ]
+        %time_string.7 = local;
+        %tmp.59 = getm $.Toybox.Lang;
+        %tmp.60 = getv function %tmp.59 :format;
+        %tmp.61 = "'$1$:$2$";
+        %tmp.62 = newa 2;
+        %tmp.64 = lgetv %hour_string.4;
+        %tmp.65 = dup %tmp.62;
+        %tmp.66 = aputv %tmp.65 0 %tmp.64;
+        %tmp.68 = lgetv %min_string.5;
+        %tmp.69 = dup %tmp.66;
+        %tmp.70 = aputv %tmp.69 1 %tmp.68;
+        %tmp.71 = invoke %tmp.59 %tmp.60(%tmp.61, %tmp.70);
+        lputv %time_string.7 %tmp.71;
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 86 8 ]
+        [ "C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_64_26_147_4_start" "C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_64_26_147_4_stop" ]
+        %date_string.8 = local;
+        %tmp.72 = getm $.Toybox.Lang;
+        %tmp.73 = getv function %tmp.72 :format;
+        %tmp.74 = "'$1$/$2$'";
+        %tmp.75 = newa 2;
+        %tmp.77 = lgetv %day_string.2;
+        %tmp.78 = dup %tmp.75;
+        %tmp.79 = aputv %tmp.78 0 %tmp.77;
+        %tmp.81 = lgetv %month_string.3;
+        %tmp.82 = dup %tmp.79;
+        %tmp.83 = aputv %tmp.82 1 %tmp.81;
+        %tmp.84 = invoke %tmp.72 %tmp.73(%tmp.74, %tmp.83);
+        lputv %date_string.8 %tmp.84;
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 88 8 ]
+C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_88_8_97_8_if_stmt:
+        %tmp.86 = getv ? :sleeping;
+        bf %tmp.86 @C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_88_8_97_8_if_false;
+C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_88_8_97_8_if_true:
+C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_88_22_91_8_start:
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 89 12 ]
+        %tmp.87 = lgetv %time_string.7;
+        %tmp.88 = ":--'";
+        %tmp.89 = add %tmp.87 %tmp.88;
+        lputv %time_string.7 %tmp.89;
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 90 12 ]
+        %tmp.90 = lgetv %dc;
+        %tmp.91 = getv function %tmp.90 :clear;
+        invoke %tmp.90 %tmp.91();
+C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_88_22_91_8_stop:
+        goto @C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_88_8_97_8_if_end;
+C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_88_8_97_8_if_false:
+C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_92_13_97_8_start:
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 93 12 ]
+C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_93_12_95_12_if_stmt:
+        %tmp.92 = lgetv %sec_string.6;
+        %tmp.93 = getv function %tmp.92 :toNumber;
+        %tmp.94 = invoke %tmp.92 %tmp.93();
+        %tmp.95 = 10;
+        %tmp.96 = lt %tmp.94 %tmp.95;
+        bf %tmp.96 @C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_93_12_95_12_if_end;
+C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_93_12_95_12_if_true:
+C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_93_44_95_12_start:
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 94 16 ]
+        %tmp.97 = "0";
+        %tmp.98 = lgetv %today.1;
+        %tmp.99 = getv %tmp.98 :sec;
+        %tmp.100 = add %tmp.97 %tmp.99;
+        lputv %sec_string.6 %tmp.100;
+C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_93_44_95_12_stop:
+        goto @C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_93_12_95_12_if_end;
+C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_93_12_95_12_if_end:
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 96 12 ]
+        %tmp.101 = lgetv %time_string.7;
+        %tmp.102 = getm $.Toybox.Lang;
+        %tmp.103 = getv function %tmp.102 :format;
+        %tmp.104 = ":$1$'";
+        %tmp.105 = newa 1;
+        %tmp.107 = lgetv %sec_string.6;
+        %tmp.108 = dup %tmp.105;
+        %tmp.109 = aputv %tmp.108 0 %tmp.107;
+        %tmp.110 = invoke %tmp.102 %tmp.103(%tmp.104, %tmp.109);
+        %tmp.111 = add %tmp.101 %tmp.110;
+        lputv %time_string.7 %tmp.111;
+C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_92_13_97_8_stop:
+C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_88_8_97_8_if_end:
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 100 8 ]
+        [ "C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_64_26_147_4_start" "C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_64_26_147_4_stop" ]
+        %hr_string.9 = local;
+        %tmp.112 = "--";
+        lputv %hr_string.9 %tmp.112;
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 101 8 ]
+        [ "C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_64_26_147_4_start" "C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_64_26_147_4_stop" ]
+        %HR.10 = local;
+        %tmp.113 = getm $.Toybox.Activity;
+        %tmp.114 = getv function %tmp.113 :getActivityInfo;
+        %tmp.115 = invoke %tmp.113 %tmp.114();
+        %tmp.116 = getv %tmp.115 :currentHeartRate;
+        lputv %HR.10 %tmp.116;
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 102 8 ]
+C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_102_8_107_8_if_stmt:
+        %tmp.118 = lgetv %HR.10;
+        bf %tmp.118 @C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_102_8_107_8_if_false;
+C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_102_8_107_8_if_true:
+C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_102_16_104_8_start:
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 103 12 ]
+        %tmp.119 = getm $.Toybox.Lang;
+        %tmp.120 = getv function %tmp.119 :format;
+        %tmp.121 = "'$1$'";
+        %tmp.122 = newa 1;
+        %tmp.124 = lgetv %HR.10;
+        %tmp.125 = dup %tmp.122;
+        %tmp.126 = aputv %tmp.125 0 %tmp.124;
+        %tmp.127 = invoke %tmp.119 %tmp.120(%tmp.121, %tmp.126);
+        lputv %hr_string.9 %tmp.127;
+C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_102_16_104_8_stop:
+        goto @C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_102_8_107_8_if_end;
+C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_102_8_107_8_if_false:
+C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_105_13_107_8_start:
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 106 12 ]
+        %tmp.128 = "'--'";
+        lputv %hr_string.9 %tmp.128;
+C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_105_13_107_8_stop:
+C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_102_8_107_8_if_end:
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 110 8 ]
+        [ "C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_64_26_147_4_start" "C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_64_26_147_4_stop" ]
+        %steps_string.11 = local;
+        %tmp.129 = "--";
+        lputv %steps_string.11 %tmp.129;
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 111 8 ]
+        [ "C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_64_26_147_4_start" "C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_64_26_147_4_stop" ]
+        %steps.12 = local;
+        %tmp.130 = getm $.Toybox.ActivityMonitor;
+        %tmp.131 = getv function %tmp.130 :getInfo;
+        %tmp.132 = invoke %tmp.130 %tmp.131();
+        %tmp.133 = getv %tmp.132 :steps;
+        lputv %steps.12 %tmp.133;
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 112 8 ]
+C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_112_8_117_8_if_stmt:
+        %tmp.135 = lgetv %steps.12;
+        bf %tmp.135 @C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_112_8_117_8_if_false;
+C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_112_8_117_8_if_true:
+C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_112_19_114_8_start:
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 113 12 ]
+        %tmp.136 = getm $.Toybox.Lang;
+        %tmp.137 = getv function %tmp.136 :format;
+        %tmp.138 = "'$1$'";
+        %tmp.139 = newa 1;
+        %tmp.141 = lgetv %steps.12;
+        %tmp.142 = dup %tmp.139;
+        %tmp.143 = aputv %tmp.142 0 %tmp.141;
+        %tmp.144 = invoke %tmp.136 %tmp.137(%tmp.138, %tmp.143);
+        lputv %steps_string.11 %tmp.144;
+C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_112_19_114_8_stop:
+        goto @C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_112_8_117_8_if_end;
+C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_112_8_117_8_if_false:
+C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_115_13_117_8_start:
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 116 12 ]
+        %tmp.145 = "'--'";
+        lputv %steps_string.11 %tmp.145;
+C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_115_13_117_8_stop:
+C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_112_8_117_8_if_end:
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 120 8 ]
+        [ "C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_64_26_147_4_start" "C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_64_26_147_4_stop" ]
+        %battery.13 = local;
+        %tmp.146 = getm $.Toybox.System;
+        %tmp.147 = getv function %tmp.146 :getSystemStats;
+        %tmp.148 = invoke %tmp.146 %tmp.147();
+        %tmp.149 = getv %tmp.148 :battery;
+        lputv %battery.13 %tmp.149;
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 121 8 ]
+        [ "C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_64_26_147_4_start" "C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_64_26_147_4_stop" ]
+        %battery_string.14 = local;
+        %tmp.150 = getm $.Toybox.Lang;
+        %tmp.151 = getv function %tmp.150 :format;
+        %tmp.152 = "'$1$%'";
+        %tmp.153 = newa 1;
+        %tmp.154 = lgetv %battery.13;
+        %tmp.155 = getv function %tmp.154 :format;
+        %tmp.156 = "%2d";
+        %tmp.157 = invoke %tmp.154 %tmp.155(%tmp.156);
+        %tmp.158 = dup %tmp.153;
+        %tmp.159 = aputv %tmp.158 0 %tmp.157;
+        %tmp.160 = invoke %tmp.150 %tmp.151(%tmp.152, %tmp.159);
+        lputv %battery_string.14 %tmp.160;
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 124 8 ]
+        [ "C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_64_26_147_4_start" "C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_64_26_147_4_stop" ]
+        %text_col.15 = local;
+        %tmp.161 = getm $.Toybox.Graphics;
+        %tmp.162 = getv %tmp.161 :COLOR_BLUE;
+        lputv %text_col.15 %tmp.162;
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 125 8 ]
+C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_125_8_127_8_if_stmt:
+        %tmp.164 = getv ? :sleeping;
+        bf %tmp.164 @C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_125_8_127_8_if_end;
+C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_125_8_127_8_if_true:
+C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_125_22_127_8_start:
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 126 12 ]
+        %tmp.165 = getm $.Toybox.Graphics;
+        %tmp.166 = getv %tmp.165 :COLOR_WHITE;
+        lputv %text_col.15 %tmp.166;
+C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_125_22_127_8_stop:
+        goto @C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_125_8_127_8_if_end;
+C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_125_8_127_8_if_end:
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 128 8 ]
+        %tmp.167 = lgetv %dc;
+        %tmp.168 = getv function %tmp.167 :setColor;
+        %tmp.170 = lgetv %text_col.15;
+        %tmp.171 = getm $.Toybox.Graphics;
+        %tmp.172 = getv %tmp.171 :COLOR_BLACK;
+        invoke %tmp.167 %tmp.168(%tmp.170, %tmp.172);
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 130 8 ]
+        %tmp.173 = lgetv %dc;
+        %tmp.174 = getv function %tmp.173 :setColor;
+        %tmp.175 = getm $.Toybox.Graphics;
+        %tmp.176 = getv %tmp.175 :COLOR_BLUE;
+        %tmp.177 = getm $.Toybox.Graphics;
+        %tmp.178 = getv %tmp.177 :COLOR_BLACK;
+        invoke %tmp.173 %tmp.174(%tmp.176, %tmp.178);
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 133 8 ]
+        %tmp.179 = lgetv %dc;
+        %tmp.180 = getv function %tmp.179 :drawText;
+        %tmp.182 = getv ? :x_start_pos;
+        %tmp.183 = 2;
+        %tmp.185 = getv ? :col_spacing;
+        %tmp.186 = mul %tmp.183 %tmp.185;
+        %tmp.187 = add %tmp.182 %tmp.186;
+        %tmp.188 = 87;
+        %tmp.189 = add %tmp.187 %tmp.188;
+        %tmp.191 = getv ? :y_start_pos;
+        %tmp.192 = 2;
+        %tmp.194 = getv ? :row_spacing;
+        %tmp.195 = mul %tmp.192 %tmp.194;
+        %tmp.196 = add %tmp.191 %tmp.195;
+        %tmp.198 = getv ? :font_size;
+        %tmp.200 = lgetv %time_string.7;
+        %tmp.202 = getv ? :justify;
+        invoke %tmp.179 %tmp.180(%tmp.189, %tmp.196, %tmp.198, %tmp.200, %tmp.202);
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 136 8 ]
+        %tmp.203 = lgetv %dc;
+        %tmp.204 = getv function %tmp.203 :drawText;
+        %tmp.206 = getv ? :x_start_pos;
+        %tmp.207 = 2;
+        %tmp.209 = getv ? :col_spacing;
+        %tmp.210 = mul %tmp.207 %tmp.209;
+        %tmp.211 = add %tmp.206 %tmp.210;
+        %tmp.212 = 87;
+        %tmp.213 = add %tmp.211 %tmp.212;
+        %tmp.215 = getv ? :y_start_pos;
+        %tmp.216 = 3;
+        %tmp.218 = getv ? :row_spacing;
+        %tmp.219 = mul %tmp.216 %tmp.218;
+        %tmp.220 = add %tmp.215 %tmp.219;
+        %tmp.222 = getv ? :font_size;
+        %tmp.224 = lgetv %date_string.8;
+        %tmp.226 = getv ? :justify;
+        invoke %tmp.203 %tmp.204(%tmp.213, %tmp.220, %tmp.222, %tmp.224, %tmp.226);
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 139 8 ]
+        %tmp.227 = lgetv %dc;
+        %tmp.228 = getv function %tmp.227 :drawText;
+        %tmp.230 = getv ? :x_start_pos;
+        %tmp.231 = 2;
+        %tmp.233 = getv ? :col_spacing;
+        %tmp.234 = mul %tmp.231 %tmp.233;
+        %tmp.235 = add %tmp.230 %tmp.234;
+        %tmp.236 = 128;
+        %tmp.237 = add %tmp.235 %tmp.236;
+        %tmp.239 = getv ? :y_start_pos;
+        %tmp.240 = 4;
+        %tmp.242 = getv ? :row_spacing;
+        %tmp.243 = mul %tmp.240 %tmp.242;
+        %tmp.244 = add %tmp.239 %tmp.243;
+        %tmp.246 = getv ? :font_size;
+        %tmp.248 = lgetv %hr_string.9;
+        %tmp.250 = getv ? :justify;
+        invoke %tmp.227 %tmp.228(%tmp.237, %tmp.244, %tmp.246, %tmp.248, %tmp.250);
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 142 8 ]
+        %tmp.251 = lgetv %dc;
+        %tmp.252 = getv function %tmp.251 :drawText;
+        %tmp.254 = getv ? :x_start_pos;
+        %tmp.255 = 2;
+        %tmp.257 = getv ? :col_spacing;
+        %tmp.258 = mul %tmp.255 %tmp.257;
+        %tmp.259 = add %tmp.254 %tmp.258;
+        %tmp.260 = 90;
+        %tmp.261 = add %tmp.259 %tmp.260;
+        %tmp.263 = getv ? :y_start_pos;
+        %tmp.264 = 5;
+        %tmp.266 = getv ? :row_spacing;
+        %tmp.267 = mul %tmp.264 %tmp.266;
+        %tmp.268 = add %tmp.263 %tmp.267;
+        %tmp.270 = getv ? :font_size;
+        %tmp.272 = lgetv %steps_string.11;
+        %tmp.274 = getv ? :justify;
+        invoke %tmp.251 %tmp.252(%tmp.261, %tmp.268, %tmp.270, %tmp.272, %tmp.274);
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 145 8 ]
+        %tmp.275 = lgetv %dc;
+        %tmp.276 = getv function %tmp.275 :drawText;
+        %tmp.278 = getv ? :x_start_pos;
+        %tmp.279 = 2;
+        %tmp.281 = getv ? :col_spacing;
+        %tmp.282 = mul %tmp.279 %tmp.281;
+        %tmp.283 = add %tmp.278 %tmp.282;
+        %tmp.284 = 95;
+        %tmp.285 = add %tmp.283 %tmp.284;
+        %tmp.287 = getv ? :y_start_pos;
+        %tmp.288 = 6;
+        %tmp.290 = getv ? :row_spacing;
+        %tmp.291 = mul %tmp.288 %tmp.290;
+        %tmp.292 = add %tmp.287 %tmp.291;
+        %tmp.294 = getv ? :font_size;
+        %tmp.296 = lgetv %battery_string.14;
+        %tmp.298 = getv ? :justify;
+        invoke %tmp.275 %tmp.276(%tmp.285, %tmp.292, %tmp.294, %tmp.296, %tmp.298);
+C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_64_26_147_4_stop:
+    }
+    [ @file = "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc"; @line = 149; ]
+    function onHide() as Void {
+    }
+    [ @file = "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc"; @line = 153; ]
+    function onExitSleep() {
+C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_153_27_157_4_start:
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 155 8 ]
+        %tmp.1 = false;
+        putv self :sleeping %tmp.1;
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 156 8 ]
+        %tmp.2 = getm $.Toybox.System;
+        %tmp.3 = getv function %tmp.2 :println;
+        %tmp.4 = "exited sleep";
+        invoke %tmp.2 %tmp.3(%tmp.4);
+C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_153_27_157_4_stop:
+    }
+    [ @file = "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc"; @line = 160; ]
+    function onEnterSleep() {
+C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_160_28_164_4_start:
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 161 8 ]
+        %tmp.1 = true;
+        putv self :sleeping %tmp.1;
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 162 8 ]
+        %tmp.2 = getm $.Toybox.System;
+        %tmp.3 = getv function %tmp.2 :println;
+        %tmp.4 = "entered sleep";
+        invoke %tmp.2 %tmp.3(%tmp.4);
+[ "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc" 163 8 ]
+        %tmp.5 = getm $.Toybox.WatchUi;
+        %tmp.6 = getv function %tmp.5 :requestUpdate;
+        invoke %tmp.5 %tmp.6();
+C_Users_user_OneDrive_Desktop_Programming_garmin_watch_faces_code_face_source_code_faceView_mc_160_28_164_4_stop:
+    }
+}
+[ @file = "C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\source\code_faceView.mc"; @line = 1; ]
+<init> {
+}

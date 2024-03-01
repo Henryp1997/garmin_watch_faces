@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+<manifest filename="C:\Users\user\OneDrive\Desktop\Programming\garmin_watch_faces\code_face\manifest.xml"/>
+<pcToLineNum>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceApp.mc" id="1" lineNum="26" parent="globals" pc="268435460" symbol="getApp"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceApp.mc" id="1" lineNum="27" parent="globals" pc="268435470" symbol="getApp"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="2" lineNum="10" parent="globals/code_faceView" pc="268435486" symbol="&lt;init&gt;"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\bin\\gen\\006-B3869-00\\source\\Rez.mcgen" id="3" lineNum="7" parent="globals/Rez" pc="268435505" symbol="&lt;init&gt;"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceApp.mc" id="4" lineNum="5" parent="globals/code_faceApp" pc="268435529" symbol="&lt;init&gt;"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="5" lineNum="153" parent="globals/code_faceView" pc="268435548" symbol="onExitSleep"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="5" lineNum="155" parent="globals/code_faceView" pc="268435550" symbol="onExitSleep"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="5" lineNum="156" parent="globals/code_faceView" pc="268435560" symbol="onExitSleep"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="7" lineNum="25" parent="globals/code_faceView" pc="268435582" symbol="onLayout"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="7" lineNum="26" parent="globals/code_faceView" pc="268435584" symbol="onLayout"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="7" lineNum="27" parent="globals/code_faceView" pc="268435625" symbol="onLayout"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="7" lineNum="28" parent="globals/code_faceView" pc="268435647" symbol="onLayout"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="7" lineNum="29" parent="globals/code_faceView" pc="268435691" symbol="onLayout"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="7" lineNum="32" parent="globals/code_faceView" pc="268435703" symbol="onLayout"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="7" lineNum="33" parent="globals/code_faceView" pc="268435725" symbol="onLayout"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="7" lineNum="34" parent="globals/code_faceView" pc="268435774" symbol="onLayout"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="7" lineNum="35" parent="globals/code_faceView" pc="268435841" symbol="onLayout"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="7" lineNum="36" parent="globals/code_faceView" pc="268435926" symbol="onLayout"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="7" lineNum="37" parent="globals/code_faceView" pc="268436011" symbol="onLayout"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="7" lineNum="38" parent="globals/code_faceView" pc="268436096" symbol="onLayout"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="7" lineNum="39" parent="globals/code_faceView" pc="268436181" symbol="onLayout"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="7" lineNum="42" parent="globals/code_faceView" pc="268436266" symbol="onLayout"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="7" lineNum="43" parent="globals/code_faceView" pc="268436288" symbol="onLayout"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="7" lineNum="44" parent="globals/code_faceView" pc="268436361" symbol="onLayout"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="7" lineNum="45" parent="globals/code_faceView" pc="268436440" symbol="onLayout"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="7" lineNum="46" parent="globals/code_faceView" pc="268436519" symbol="onLayout"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="7" lineNum="47" parent="globals/code_faceView" pc="268436598" symbol="onLayout"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="7" lineNum="48" parent="globals/code_faceView" pc="268436677" symbol="onLayout"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="7" lineNum="51" parent="globals/code_faceView" pc="268436756" symbol="onLayout"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="7" lineNum="52" parent="globals/code_faceView" pc="268436778" symbol="onLayout"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="7" lineNum="53" parent="globals/code_faceView" pc="268436851" symbol="onLayout"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="8" lineNum="160" parent="globals/code_faceView" pc="268436925" symbol="onEnterSleep"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="8" lineNum="161" parent="globals/code_faceView" pc="268436927" symbol="onEnterSleep"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="8" lineNum="162" parent="globals/code_faceView" pc="268436937" symbol="onEnterSleep"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="8" lineNum="163" parent="globals/code_faceView" pc="268436958" symbol="onEnterSleep"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="9" lineNum="20" parent="globals/code_faceView" pc="268436975" symbol="initialize"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="9" lineNum="21" parent="globals/code_faceView" pc="268436977" symbol="initialize"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="11" lineNum="64" parent="globals/code_faceView" pc="268436996" symbol="onUpdate"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="11" lineNum="67" parent="globals/code_faceView" pc="268437000" symbol="onUpdate"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="11" lineNum="68" parent="globals/code_faceView" pc="268437037" symbol="onUpdate"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="11" lineNum="69" parent="globals/code_faceView" pc="268437047" symbol="onUpdate"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="11" lineNum="70" parent="globals/code_faceView" pc="268437057" symbol="onUpdate"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="11" lineNum="71" parent="globals/code_faceView" pc="268437067" symbol="onUpdate"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="11" lineNum="72" parent="globals/code_faceView" pc="268437077" symbol="onUpdate"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="11" lineNum="73" parent="globals/code_faceView" pc="268437087" symbol="onUpdate"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="11" lineNum="74" parent="globals/code_faceView" pc="268437113" symbol="onUpdate"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="11" lineNum="76" parent="globals/code_faceView" pc="268437126" symbol="onUpdate"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="11" lineNum="77" parent="globals/code_faceView" pc="268437152" symbol="onUpdate"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="11" lineNum="79" parent="globals/code_faceView" pc="268437165" symbol="onUpdate"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="11" lineNum="80" parent="globals/code_faceView" pc="268437191" symbol="onUpdate"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="11" lineNum="82" parent="globals/code_faceView" pc="268437204" symbol="onUpdate"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="11" lineNum="83" parent="globals/code_faceView" pc="268437230" symbol="onUpdate"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="11" lineNum="85" parent="globals/code_faceView" pc="268437243" symbol="onUpdate"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="11" lineNum="86" parent="globals/code_faceView" pc="268437291" symbol="onUpdate"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="11" lineNum="88" parent="globals/code_faceView" pc="268437339" symbol="onUpdate"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="11" lineNum="89" parent="globals/code_faceView" pc="268437350" symbol="onUpdate"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="11" lineNum="90" parent="globals/code_faceView" pc="268437360" symbol="onUpdate"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="11" lineNum="93" parent="globals/code_faceView" pc="268437375" symbol="onUpdate"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="11" lineNum="94" parent="globals/code_faceView" pc="268437395" symbol="onUpdate"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="11" lineNum="96" parent="globals/code_faceView" pc="268437414" symbol="onUpdate"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="11" lineNum="100" parent="globals/code_faceView" pc="268437455" symbol="onUpdate"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="11" lineNum="101" parent="globals/code_faceView" pc="268437462" symbol="onUpdate"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="11" lineNum="102" parent="globals/code_faceView" pc="268437485" symbol="onUpdate"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="11" lineNum="103" parent="globals/code_faceView" pc="268437490" symbol="onUpdate"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="11" lineNum="106" parent="globals/code_faceView" pc="268437531" symbol="onUpdate"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="11" lineNum="110" parent="globals/code_faceView" pc="268437538" symbol="onUpdate"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="11" lineNum="111" parent="globals/code_faceView" pc="268437545" symbol="onUpdate"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="11" lineNum="112" parent="globals/code_faceView" pc="268437568" symbol="onUpdate"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="11" lineNum="113" parent="globals/code_faceView" pc="268437573" symbol="onUpdate"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="11" lineNum="116" parent="globals/code_faceView" pc="268437614" symbol="onUpdate"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="11" lineNum="120" parent="globals/code_faceView" pc="268437621" symbol="onUpdate"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="11" lineNum="121" parent="globals/code_faceView" pc="268437644" symbol="onUpdate"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="11" lineNum="124" parent="globals/code_faceView" pc="268437696" symbol="onUpdate"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="11" lineNum="125" parent="globals/code_faceView" pc="268437703" symbol="onUpdate"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="11" lineNum="126" parent="globals/code_faceView" pc="268437714" symbol="onUpdate"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="11" lineNum="128" parent="globals/code_faceView" pc="268437724" symbol="onUpdate"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="11" lineNum="130" parent="globals/code_faceView" pc="268437743" symbol="onUpdate"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="11" lineNum="133" parent="globals/code_faceView" pc="268437765" symbol="onUpdate"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="11" lineNum="136" parent="globals/code_faceView" pc="268437847" symbol="onUpdate"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="11" lineNum="139" parent="globals/code_faceView" pc="268437929" symbol="onUpdate"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="11" lineNum="142" parent="globals/code_faceView" pc="268438011" symbol="onUpdate"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceView.mc" id="11" lineNum="145" parent="globals/code_faceView" pc="268438093" symbol="onUpdate"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceApp.mc" id="12" lineNum="12" parent="globals/code_faceApp" pc="268438176" symbol="onStart"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceApp.mc" id="13" lineNum="20" parent="globals/code_faceApp" pc="268438179" symbol="getInitialView"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceApp.mc" id="13" lineNum="21" parent="globals/code_faceApp" pc="268438181" symbol="getInitialView"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceApp.mc" id="14" lineNum="7" parent="globals/code_faceApp" pc="268438222" symbol="initialize"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceApp.mc" id="14" lineNum="8" parent="globals/code_faceApp" pc="268438224" symbol="initialize"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\source\\code_faceApp.mc" id="15" lineNum="16" parent="globals/code_faceApp" pc="268438243" symbol="onStop"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\bin\\gen\\006-B3869-00\\source\\Rez.mcgen" id="16" lineNum="13" parent="globals/Rez/Layouts" pc="268438246" symbol="WatchFace"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\bin\\gen\\006-B3869-00\\source\\Rez.mcgen" id="16" lineNum="14" parent="globals/Rez/Layouts" pc="268438258" symbol="WatchFace"/>
+<entry filename="C:\\Users\\user\\OneDrive\\Desktop\\Programming\\garmin_watch_faces\\code_face\\bin\\gen\\006-B3869-00\\source\\Rez.mcgen" id="16" lineNum="16" parent="globals/Rez/Layouts" pc="268438357" symbol="WatchFace"/>
+</pcToLineNum>
+<symbolTable>
+<entry id="8388639" module="true" symbol="Graphics"/>
+<entry id="8388632" method="true" symbol="&lt;init&gt;"/>
+<entry field="true" id="10" symbol="justify"/>
+<entry id="6" object="true" symbol="code_faceApp"/>
+<entry id="8388924" module="true" symbol="Gregorian"/>
+<entry field="true" id="8388611" module="true" symbol="Toybox"/>
+<entry field="true" id="13" symbol="x_start_pos"/>
+<entry field="true" id="12" symbol="sleeping"/>
+<entry field="true" id="17" symbol="AppName"/>
+<entry id="8388633" module="true" symbol="ActivityMonitor"/>
+<entry id="5" module="true" symbol="globals/Rez/Strings"/>
+<entry id="8388631" module="true" symbol="Activity"/>
+<entry id="8388648" module="true" symbol="WatchUi"/>
+<entry field="true" id="9" symbol="font_size"/>
+<entry id="2" module="true" symbol="globals/Rez"/>
+<entry id="8389124" method="true" symbol="onUpdate"/>
+<entry id="8389375" method="true" object="true" symbol="WatchFace"/>
+<entry field="true" id="8389065" symbol="locY"/>
+<entry field="true" id="8389064" symbol="locX"/>
+<entry field="true" id="11" symbol="row_spacing"/>
+<entry field="true" id="14" symbol="y_start_pos"/>
+<entry id="8388771" module="true" object="true" symbol="Drawables"/>
+<entry id="8389348" symbol="font"/>
+<entry id="8389275" method="true" symbol="getApp"/>
+<entry id="4" module="true" symbol="globals/Rez/Layouts"/>
+<entry id="8389122" method="true" symbol="onLayout"/>
+<entry id="8389376" method="true" symbol="onEnterSleep"/>
+<entry field="true" id="8389063" symbol="identifier"/>
+<entry id="3" module="true" symbol="globals/Rez/Drawables"/>
+<entry id="8389377" method="true" symbol="onExitSleep"/>
+<entry id="8388644" module="true" symbol="System"/>
+<entry id="8388645" module="true" symbol="Time"/>
+<entry id="8388769" module="true" object="true" symbol="Rez"/>
+<entry id="7" object="true" symbol="code_faceView"/>
+<entry id="8388640" module="true" symbol="Lang"/>
+<entry field="true" id="16" symbol="LauncherIcon"/>
+<entry id="8388610" symbol="statics"/>
+<entry id="8389123" method="true" symbol="onShow"/>
+<entry id="8389350" module="true" symbol="globals"/>
+<entry id="8388770" module="true" object="true" symbol="Strings"/>
+<entry id="8388702" method="true" symbol="initialize"/>
+<entry id="8389279" method="true" symbol="onStart"/>
+<entry field="true" id="8" symbol="col_spacing"/>
+<entry id="8389280" method="true" symbol="getInitialView"/>
+<entry id="8389281" method="true" symbol="onStop"/>
+<entry id="8389347" symbol="color"/>
+<entry id="15" module="true" symbol="Layouts"/>
+<entry id="8389125" method="true" symbol="onHide"/>
+<entry id="8388635" module="true" symbol="Application"/>
+</symbolTable>
+<localVars>
+<entry arg="true" endPc="268436924" name="dc" stackId="1" startPc="268435582"/>
+<entry arg="true" endPc="268438175" name="dc" stackId="1" startPc="268436996"/>
+<entry endPc="268438174" name="today" stackId="2" startPc="268437000"/>
+<entry endPc="268438174" name="day_string" stackId="3" startPc="268437000"/>
+<entry endPc="268438174" name="month_string" stackId="4" startPc="268437000"/>
+<entry endPc="268438174" name="hour_string" stackId="5" startPc="268437000"/>
+<entry endPc="268438174" name="min_string" stackId="6" startPc="268437000"/>
+<entry endPc="268438174" name="sec_string" stackId="7" startPc="268437000"/>
+<entry endPc="268438174" name="time_string" stackId="8" startPc="268437000"/>
+<entry endPc="268438174" name="date_string" stackId="9" startPc="268437000"/>
+<entry endPc="268438174" name="hr_string" stackId="10" startPc="268437000"/>
+<entry endPc="268438174" name="HR" stackId="11" startPc="268437000"/>
+<entry endPc="268438174" name="steps_string" stackId="12" startPc="268437000"/>
+<entry endPc="268438174" name="steps" stackId="13" startPc="268437000"/>
+<entry endPc="268438174" name="battery" stackId="14" startPc="268437000"/>
+<entry endPc="268438174" name="battery_string" stackId="15" startPc="268437000"/>
+<entry endPc="268438174" name="text_col" stackId="16" startPc="268437000"/>
+<entry arg="true" endPc="268438373" name="dc" stackId="1" startPc="268438246"/>
+<entry endPc="268438373" name="rez_cmp_local_text_init_text" stackId="2" startPc="268438258"/>
+</localVars>
+<annotations>
+<annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AppName"/>
+</annotations>
+<dataEntryOffsetMappings>
+<dataEntry label="globals" offset="63" parentId="" symbolId="globals" type="module"/>
+<dataEntry label="globals/code_faceView" offset="134" parentId="globals" symbolId="code_faceView" type="class"/>
+<dataEntry label="globals/Rez" offset="285" parentId="globals" symbolId="Rez" type="module"/>
+<dataEntry label="globals/code_faceApp" offset="340" parentId="globals" symbolId="code_faceApp" type="class"/>
+<dataEntry label="globals/Rez/Drawables" offset="411" parentId="Rez" symbolId="Drawables" type="module"/>
+<dataEntry label="globals/Rez/Layouts" offset="450" parentId="Rez" symbolId="Layouts" type="module"/>
+<dataEntry label="globals/Rez/Strings" offset="489" parentId="Rez" symbolId="Strings" type="module"/>
+</dataEntryOffsetMappings>
+<functions>
+<functionEntry accessMode="public" endPc="268435485" name="getApp" startPc="268435460">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435504" name="&lt;init&gt;" parent="code_faceView" startPc="268435486">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435528" name="&lt;init&gt;" parent="Rez" startPc="268435505">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435547" name="&lt;init&gt;" parent="code_faceApp" startPc="268435529">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435581" name="onExitSleep" parent="code_faceView" startPc="268435548">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onShow" parent="code_faceView">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436924" name="onLayout" parent="code_faceView" startPc="268435582">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436974" name="onEnterSleep" parent="code_faceView" startPc="268436925">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436995" name="initialize" parent="code_faceView" startPc="268436975">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onHide" parent="code_faceView">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438175" name="onUpdate" parent="code_faceView" startPc="268436996">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="Drawables">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="Layouts">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="Strings">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438178" name="onStart" parent="code_faceApp" startPc="268438176">
+<param id="state"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438221" name="getInitialView" parent="code_faceApp" startPc="268438179">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438242" name="initialize" parent="code_faceApp" startPc="268438222">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438245" name="onStop" parent="code_faceApp" startPc="268438243">
+<param id="state"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438373" name="WatchFace" parent="Layouts" startPc="268438246">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+</functions>
+</debugInfo>
